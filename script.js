@@ -9,6 +9,7 @@ function calculateMinCost() {
 
   let cost = 0;
   let ropeArray = [...ropes];
+
   while (ropeArray.length > 1) {
     ropeArray.sort((a, b) => a - b);
     const first = ropeArray.shift();
@@ -17,5 +18,6 @@ function calculateMinCost() {
     cost += sum;
     ropeArray.push(sum);
   }
-	document.getElementById("result").textContent = cost;
+
+  document.getElementById("result").textContent = cost;
 }
